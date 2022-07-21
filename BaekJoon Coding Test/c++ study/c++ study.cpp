@@ -218,4 +218,35 @@ int main()
 	cout << sum;
 }*/
 
+// 팰린드롬수 (백준 1259번)
+/*
+int main() {
+	while (true) {
+		vector<int> vec;
+		int N;
+		bool isTrue = true;
 
+		cin >> N;
+
+		if (N == 0)
+			break;
+
+		while (N > 0) {
+			vec.push_back(N % 10);
+
+			N /= 10;
+		}
+
+		for (int i = 0; i < vec.size(); i++) {
+			if (vec[i] != vec[vec.size() - i - 1]) {
+				isTrue = false;
+				break;
+			}
+		}
+
+		if (isTrue)
+			cout << "yes\n";
+		else
+			cout << "no\n";
+	}
+}*/
