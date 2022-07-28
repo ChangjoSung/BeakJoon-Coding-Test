@@ -3,7 +3,85 @@
 #include <vector> // 벡터 사용
 #include <algorithm> //정렬 사용
 #include <string>
+#include <stack>
 using namespace std;
+
+//히스토그램(백준 1725)
+/*
+int main() {
+	int N;
+	int popChance = 0;
+	int popSum = 0;
+
+	long long height;
+	long long max = 0;
+	long long result = 0;
+
+	stack<pair<long long, long long>> st;
+
+	vector<int> vec;
+
+	cin >> N;
+
+	st.push({ 0, 0 });
+
+	for (int i = 0; i < N; i++) {
+		popSum = 0;
+		popChance = 0;
+
+		cin >> height;
+
+		while (height < st.top().first) // 들어온 height가 기존보다 작을 때
+		{
+			popSum = vec[vec.size() - 1] + popSum; //현재 가장 오른쪽 수의 pop횟수
+			st.top().second = st.top().second + popChance + popSum;
+
+			result = st.top().first * st.top().second;
+			//cout << st.top().first << '\t' << st.top().second << '\t' << result << '\n';
+
+			popChance++;
+
+			st.pop();
+			vec.pop_back();
+
+			if (result > max) // result가 저장되어있던 max보다 클 때
+			{
+				max = result;
+			}
+		}
+
+		if (height >= st.top().first) // 들어온 height가 기존보다 클때
+		{
+			st.push({ height, 1 });
+			//cout << st.top().first << '\t' << st.top().second << '\t' << '\t' << popChance + popSum << '\n';
+		}
+
+		vec.push_back(popChance + popSum);
+	}
+
+	popSum = 0;
+	popChance = 0;
+	while (st.size() != 1) {
+		popSum = vec[vec.size() - 1] + popSum;
+		st.top().second = st.top().second + popChance + popSum;
+
+		result = st.top().first * st.top().second;
+		// cout << st.top().first << '\t' << st.top().second << '\t' << result <<
+		// '\n';
+
+		popChance++;
+
+		st.pop();
+		vec.pop_back();
+
+		if (result > max) // result가 저장되어있던 m8 ax보다 클 때
+		{
+			max = result;
+		}
+	}
+
+	cout << max;
+}*/
 
 //직사각형에서 탈출하기(백준 1085)
 /*
@@ -218,4 +296,37 @@ int main()
 	cout << sum;
 }*/
 
+
+// 펠린드롬수(백준 1259번)
+/*
+int main() {
+	while (true) {
+		vector<int> vec;
+		int N;
+		bool isTrue = true;
+
+		cin >> N;
+
+		if (N == 0)
+			break;
+
+		while (N > 0) {
+			vec.push_back(N % 10);
+
+			N /= 10;
+		}
+
+		for (int i = 0; i < vec.size(); i++) {
+			if (vec[i] != vec[vec.size() - i - 1]) {
+				isTrue = false;
+				break;
+			}
+		}
+
+		if (isTrue)
+			cout << "yes\n";
+		else
+			cout << "no\n";
+	}
+}*/
 
