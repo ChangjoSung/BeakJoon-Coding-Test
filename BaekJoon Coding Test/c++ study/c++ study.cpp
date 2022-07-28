@@ -296,15 +296,6 @@ int main()
 	cout << sum;
 }*/
 
-// 팰린드롬수 (백준 1259번)
-/*
-int main() {
-	while (true) {
-		vector<int> vec;
-		int N;
-		bool isTrue = true;
-
-<<<<<<< HEAD
 // 펠린드롬수(백준 1259번)
 /*
 int main() {
@@ -313,8 +304,7 @@ int main() {
 		int N;
 		bool isTrue = true;
 
-=======
->>>>>>> 6d5ae878ca084fc7cce9cd32b91261c37ff7e74d
+
 		cin >> N;
 
 		if (N == 0)
@@ -338,9 +328,7 @@ int main() {
 		else
 			cout << "no\n";
 	}
-<<<<<<< HEAD
+
 }*/
 
-=======
-}*/
->>>>>>> 6d5ae878ca084fc7cce9cd32b91261c37ff7e74d
+
